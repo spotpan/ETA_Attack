@@ -120,30 +120,20 @@ tune : different adapt strategy
 
 
 ## 6. Recommended Evaluation Commands
-6.1 Baseline Evaluation
-python backdoor_attack.py --task evaluate \
-  --weight_file saved_weights/triggered_model.pth \
-  --batch_size 256 \
-  --result_file results/eval_baseline.csv \
-  --log_file eval_baseline
 
-### 6.2 Main Backdoor Results (Recommended)
+### Trigger Size = 1
 
-Partition Q is recommended for clear visualization and comparison.
+```bash
+python backdoor_attack.py --task evaluate   --partition J   --trigger_size 1   --batch_size 256   --result_file results/eval_J_k1.csv   --log_file eval_J_1
+```
 
-# Trigger size = 1
-python backdoor_attack.py --task evaluate \
-  --weight_file saved_weights/triggered_model_adv_Q_1_tune.pth \
-  --batch_size 256 \
-  --result_file results/eval_Q_k1.csv \
-  --log_file eval_Q_k1
+### Trigger Size = 2
 
-# Trigger size = 3
-python backdoor_attack.py --task evaluate \
-  --weight_file saved_weights/triggered_model_adv_Q_3_tune.pth \
-  --batch_size 256 \
-  --result_file results/eval_Q_k3.csv \
-  --log_file eval_Q_k3
+```bash
+python backdoor_attack.py --task evaluate   --partition J   --trigger_size 2   --batch_size 256   --result_file results/eval_J_k2.csv   --log_file eval_J_2
+```
+
+---
 
 ## 7. Visualization Utilities
 
