@@ -18,3 +18,53 @@ assets/
 
 # OS
 .DS_Store
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Logs & outputs
+logs/
+log/
+results/
+result/
+outputs/
+runs/
+
+# Large artifacts / weights / data (common in ML repos)
+data/
+dataset/
+datasets/
+saved_weights/
+weights/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Local html/img artifacts
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.html
+
+# Sync conflict files
+*sync-conflict*
