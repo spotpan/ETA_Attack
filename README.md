@@ -12,40 +12,40 @@ optimization and evaluation pipelines.
 
 ## 1. Repository Structure
 
-'''
-├── backdoor_attack.py # Main entry for backdoor training & evaluation
-├── backdoor_attack_acceleration.py # Acceleration-based trigger variants
-├── main.py # Original training entry (kept for reference)
-│
-├── TTPNet.py # Full TTPNet model definition
+```text
+TTPNet-master/
+├── attacks/
+|    ├── backdoor_attack.py
+|    └── backdoor_attack_acceleration.py
+├── main.py
+├── TTPNet.py
 ├── PredictionBiLSTM.py
 ├── SpeedRoadLSTM.py
 ├── Speed.py
 ├── Road.py
 ├── Attr.py
-│
-├── data_loader.py # Dataset loader
-├── utils.py # Utility functions
-├── logger.py # Logging utilities
-│
+├── data_loader.py
+├── utils.py
+├── logger.py
 ├── Config/
-│ └── embedding_128.npy # Road embedding (required)
-│
-├── saved_weights/ # Pretrained and backdoored checkpoints
-├── results/ # Evaluation CSV outputs
-├── logs/ # Log files
-│
-├── plot_trajectory_comparison.py
-├── plot_trajectory_comp_google_api.py
-├── plot_trajectory_salient_map.py
-├── plot_trajectory_salient_map_inone.py
-├── plot_trajectory_salient_map_six.py
-│
+│   ├── Config_128.json
+│   └── embedding_128.npy
+├── saved_weights/
+├── results/
+├── logs/
+├── scripts/
+    ├── plot_trajectory_comparison.py
+    └── plot_trajectory_comp_google_api.py
+    └──plot_trajectory_salient_map.py
+    └──plot_trajectory_salient_map_inone.py
+    └── plot_trajectory_salient_map_six.py
 ├── trajectory_6panel.png
 ├── trajectory_map.html
-│
 └── README.md
-'''
+```
+
+---
+
 
 > **Note**:  
 > For reproducibility and repository size constraints, we provide the complete
@@ -101,10 +101,10 @@ evaluate : Evaluate clean and triggered trajectories
 All checkpoints are stored under saved_weights/.
 
 5.1 Backdoored Models (Main Results)
-triggered_model_adv_<P>_<num>.pth
-triggered_model_adv_<P>_<num>_train.pth
-triggered_model_adv_<P>_<num>_adpt.pth
-triggered_model_adv_<P>_<num>_tune.pth
+triggered_model_adv_<J>_<num>.pth
+triggered_model_adv_<J>_<num>_train.pth
+triggered_model_adv_<J>_<num>_adpt.pth
+triggered_model_adv_<J>_<num>_tune.pth
 
 
 <P> : trajectory partition / trigger placement strategy
