@@ -12,6 +12,7 @@ optimization and evaluation pipelines.
 
 ## 1. Repository Structure
 
+'''
 ├── backdoor_attack.py # Main entry for backdoor training & evaluation
 ├── backdoor_attack_acceleration.py # Acceleration-based trigger variants
 ├── main.py # Original training entry (kept for reference)
@@ -44,7 +45,7 @@ optimization and evaluation pipelines.
 ├── trajectory_map.html
 │
 └── README.md
-
+'''
 
 > **Note**:  
 > For reproducibility and repository size constraints, we provide the complete
