@@ -124,13 +124,13 @@ tune : different adapt strategy
 ### Trigger Size = 1
 
 ```bash
-python backdoor_attack.py --task evaluate   --partition J   --trigger_size 1   --batch_size 256   --result_file results/eval_J_k1.csv   --log_file eval_J_1
+python backdoor_attack.py   --task evaluate   --log_file eval   --partition J   --trigger_size 1   --batch_size 256   --result_file results/eval.csv 
 ```
 
 ### Trigger Size = 2
 
 ```bash
-python backdoor_attack.py --task evaluate   --partition J   --trigger_size 2   --batch_size 256   --result_file results/eval_J_k2.csv   --log_file eval_J_2
+python backdoor_attack.py   --task evaluate   --log_file eval   --partition J   --trigger_size 2   --batch_size 256   --result_file results/eval.csv 
 ```
 
 ---
